@@ -1,0 +1,37 @@
+using System;
+using MoneyChangeAPI.DataAccess;
+using MoneyChangeAPI.Entities;
+using MoneyChangeAPI.Models;
+
+namespace MoneyChangeAPI.BussinesLogic;
+
+public class MetaBL
+{
+    private readonly MetaDA metaDA;
+    public MetaBL(IConfiguration configuration)
+    {
+        metaDA = new MetaDA(configuration.GetConnectionString("dbMoneyControl"));
+    }
+
+    public MetaEntity BuscarPorId(int id_meta){
+        try
+        {
+            return metaDA.BuscarPorId(id_meta);   
+        }
+        catch (System.Exception)
+        {
+            throw;
+        }        
+    }
+
+    public IEnumerable<MetaItemModel> ListarPorUsuario(string id_usuario){
+        try
+        {
+            return metaDA.ListarPorUsuario(id_usuario);
+        }
+        catch (System.Exception)
+        {
+            throw;
+        }
+    }
+}
