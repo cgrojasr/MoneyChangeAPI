@@ -78,11 +78,12 @@ public class MetaDA : MetaRepository, CRUDRepository<MetaEntity>
                 var query = $"UPDATE Meta SET "+
                             $"nombre = '{obj.nombre}', "+
                             $"monto = {obj.monto}, "+
-                            $"fecha_inicio = {obj.fecha_inicio}, "+
-                            $"fecha_final = {obj.fecha_final}, "+
+                            $"fecha_inicio = '{obj.fecha_inicio}', "+
+                            $"fecha_final = '{obj.fecha_final}', "+
                             $"url_image = '{obj.url_image}' "+
                             $"FROM Meta "+
                             $"WHERE id_meta = {obj.id_meta}";
+                conn.Execute(query);
 
                 return true;
             }
@@ -104,8 +105,8 @@ public class MetaDA : MetaRepository, CRUDRepository<MetaEntity>
                             $"'{obj.nombre}', "+
                             $"'{obj.id_usuario}', "+
                             $"{obj.monto}, "+
-                            $"{obj.fecha_inicio}, "+
-                            $"{obj.fecha_final}, "+
+                            $"'{obj.fecha_inicio}', "+
+                            $"'{obj.fecha_final}', "+
                             $"'{obj.url_image}') "+
                             $"SELECT SCOPE_IDENTITY()";
 

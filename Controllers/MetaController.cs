@@ -37,5 +37,41 @@ namespace MoneyChangeAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpPost]
+        public IActionResult Registrar([FromBody]MetaEntity metaEntity){
+            try
+            {
+                return Ok(metaBL.Registrar(metaEntity));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPut]
+        public IActionResult Modificar([FromBody]MetaEntity metaEntity){
+            try
+            {
+                return Ok(metaBL.Modificar(metaEntity));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete]
+        public IActionResult Eliminar(int id_meta){
+            try
+            {
+                return Ok(metaBL.Eliminar(id_meta));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

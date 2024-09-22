@@ -78,3 +78,4 @@ e:\OneDrive\cgrojasr\OneDrive\Documents\Laboral\UPC\Desarrollo Web\NET Core\Mone
 e:\OneDrive\cgrojasr\OneDrive\Documents\Laboral\UPC\Desarrollo Web\NET Core\MoneyChangeAPI\obj\Debug\net8.0\MoneyChangeAPI.pdb
 e:\OneDrive\cgrojasr\OneDrive\Documents\Laboral\UPC\Desarrollo Web\NET Core\MoneyChangeAPI\obj\Debug\net8.0\MoneyChangeAPI.genruntimeconfig.cache
 e:\OneDrive\cgrojasr\OneDrive\Documents\Laboral\UPC\Desarrollo Web\NET Core\MoneyChangeAPI\obj\Debug\net8.0\ref\MoneyChangeAPI.dll
+e:\OneDrive\cgrojasr\OneDrive\Documents\Laboral\UPC\Desarrollo Web\NET Core\MoneyChangeAPI\obj\Debug\net8.0\MoneyChangeAPI.sourcelink.json

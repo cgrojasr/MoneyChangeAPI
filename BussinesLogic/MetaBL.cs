@@ -18,7 +18,7 @@ public class MetaBL
         {
             return metaDA.BuscarPorId(id_meta);   
         }
-        catch (System.Exception)
+        catch (Exception)
         {
             throw;
         }        
@@ -30,6 +30,39 @@ public class MetaBL
             return metaDA.ListarPorUsuario(id_usuario);
         }
         catch (System.Exception)
+        {
+            throw;
+        }
+    }
+
+    public int Registrar(MetaEntity metaEntity){
+        try
+        {
+            return metaDA.Registrar(metaEntity);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public bool Modificar(MetaEntity metaEntity){
+        try
+        {
+            return metaDA.Modificar(metaEntity);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public bool Eliminar(int id_meta){
+        try
+        {
+            return metaDA.Eliminar(id_meta);
+        }
+        catch (Exception)
         {
             throw;
         }
